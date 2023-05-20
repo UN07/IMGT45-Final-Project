@@ -1,0 +1,110 @@
+{% include "menu.html" %}
+<header>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <style>
+    body{
+    background-image: url("{{ url_for('static', filename= '/images/lagooon3.png')}}");
+    background-color:rgb(185, 172, 255);
+    background-size:500px;
+    }
+    .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    left: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.80);
+    }
+    .profilepic img{
+    display: block;
+    width: 250px;        
+    height: 250px;
+    border-radius: 50%;
+    margin: 0 auto;
+    object-fit: cover;
+    }
+    .sound img{
+    display: block;
+    width: 550px;        
+    height: 240px;
+    margin: 0 auto;
+    object-fit: cover;
+    }
+
+    .title {
+    color: rgb(29, 29, 29);
+    font-size: 18px;
+    }
+    .text {
+    font-size: 16px;
+    }
+
+
+    button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    }
+
+    button:hover{
+    opacity: 0.7;
+    }
+    .previous{
+    position: absolute;
+    top: 33%;
+    left: 17%;
+    font-size: 130px;
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    }
+    .next{
+    position: absolute;
+    top: 33%;
+    left: 93%;
+    font-size: 130px;
+    }
+    .next a{
+    color:rgb(0, 0, 0,0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    }
+    .previous a{
+    color:rgb(0, 0, 0,0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    }
+    </style>
+</header>
+<br>
+<div class="card">
+<br>
+<div class="profilepic">
+<img src="{{ url_for('static', filename= '/images/lagooon.jpg')}}">
+</div>
+  <h1>Lagooon</h1>
+  <p class="title">Artist/Band</p>
+  <p class="text">From rehearsing in classroom corridors and small bathrooms, to performing<br>
+     in front of large crowds and amassing thousands of Soundcloud plays, Lucy Dee<br>
+     has come a long way since their inception back in 2017.</p>
+    <div class ="sound">
+    <img src="{{ url_for('static', filename= '/images/lagooon5.png')}}">
+    </div>
+    <br>
+  <p><button>Connect</button></p>
+</div>
+<br>
+<div class ="previous">
+<a href="/discover">&#10151;</a>
+</div>
+<div class ="next">
+    <a href="/discover">&#10151;</a>
+</div>

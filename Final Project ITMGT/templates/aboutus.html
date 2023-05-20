@@ -1,0 +1,43 @@
+{% include "menu.html" %}
+<header>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <style>
+    body{
+    background-image: url("{{ url_for('static', filename= '/images/producer.jpeg')}}");
+    background-size: cover;
+    }
+    .aboutus{
+    position: relative;
+    left: 100px;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+    }
+    .small{
+    font-size: 25px;
+    }
+    h1 {
+    font-size: 80px;
+    }
+    </style>
+</header>
+    <body>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class = 'aboutus'>
+        <h1>About us.</h1>
+                <br>
+                <div class = 'small'>
+                Mixxer started in 2023 as a passion project between 5 friends who shared<br>
+                the same passion for music. Here in Mixxer, we strive to bring artists of <br>
+                all backgrounds together to share the same passion our team shares in music.<br>
+                We want to cultivate an environment where artists are treated right and grow <br>
+                together. Come join us in making a change.<br>
+                </div>
+        </div>
+    </body>
+

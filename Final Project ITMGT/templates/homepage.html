@@ -1,0 +1,88 @@
+{% include "menu.html" %}
+<header>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <style>
+    h1{
+    position: relative;
+    left: 100px;
+    text-align: center;
+    }
+    .mixxer img{
+        display: block;
+        width: 700px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 0 auto;
+        object-fit: cover;
+        position: relative;
+        left: 100px;
+    }
+    .background-image img{
+        background-size: cover;
+        width: 2500px;
+        height: 1000px;
+        padding-top:80px;
+        object-fit: cover;
+    }
+    .vision {
+        position: absolute;
+        top: 140%;
+        left: 57%;
+        font-size: 80px;
+        color: rgb(228, 228, 228);
+        transform: translate(-50%, -50%);
+    }
+    .vision2 {
+        position: absolute;
+        width: 1000px;
+        height: 225px;
+        top: 165%;
+        left: 57%;
+        font-size: 25px;
+        color: rgb(228, 228, 228);
+        transform: translate(-50%, -50%);
+        text-align:center;
+
+    }
+    
+    </style>
+</header>
+    <body>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Welcome to...</h1>
+        <div class = "mixxer">
+        <img src="{{ url_for('static', filename= '/images/Mixxerlogo.png')}}">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="background-image">
+            <div class = "vision">
+                
+                Our Vision.
+            </div>
+            <div class = "vision2">
+                "To connect artists, to mitigate growth, and to celebrate music. Here in Mixxer, we envision a community of musicians who support one another no matter the background.
+                We aim to create a platform where artists of all backgrounds can share their work and take pride in their talents. <a href='/login'>Sign-up </a> now and take part in making change".
+            </div>
+            <img src="{{ url_for('static', filename= '/images/aboutus.webp')}}">
+
+        </div>
+        </div>
+      </body>
+
+    </body>

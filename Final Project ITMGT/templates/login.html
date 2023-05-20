@@ -1,0 +1,56 @@
+{% include "menu.html" %}
+<header>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <style>
+    body{
+    background-image: url("{{ url_for('static', filename= '/images/NIKI.webp')}}");
+    background-size: cover;
+    }
+    .small{
+    font-size: 20px;
+
+    }
+    .login{
+    box-shadow: 0px 8px 8px 8px rgba(255, 55, 0, 0.7);
+    left: 100px;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.7);
+    border-radius:5%;
+    }
+
+    </style>
+</header>
+    <body>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class = "login">
+        <div class ="bgcolor">
+        <br>
+        <h1>Login</h1>
+            <form action="/auth" method="POST">
+
+                <div class = 'small'>
+                Username or email address
+                </div>
+                <input type="text" name="username"></input>
+                <div class = 'small'>
+                Password
+                </div>
+                <input type="password" name="password"></input>
+                <div>
+                <input type="submit" value="Login"/>
+                </div>
+        </div>    
+        </div>  
+        </form>
+    </body>
+

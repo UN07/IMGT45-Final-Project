@@ -1,0 +1,121 @@
+<html>
+<header>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <style>
+        .wrapper .footer {
+            font-size:10px;
+        }
+        body{
+            background: #f5f6fa;
+        }
+        .wrapper .sidebar{
+            background: #e6e6fa;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 225px;
+            height: 100%;
+            padding: 20px 0;
+            transition: all 0.5s ease;
+        }
+            .wrapper .sidebar .profile{
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .wrapper .sidebar .logo{
+            margin-bottom: 30px;
+            position:relative;
+            right: 15px ;
+        }
+        .wrapper .sidebar .profile img{
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit:cover;
+        }
+        .wrapper .sidebar .logo img{
+            display: block;
+            width: 180px;
+            height: 45px;
+            border-radius: 50%;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+        .wrapper .sidebar ul a{
+            display: inline-block;
+            width: 140px;
+            height: 45px;
+            padding: 13px 30px;
+            border-bottom: 1px solid #10558d;
+            color: rgb(30, 3, 34);
+            font-size: 14px;
+            text-align: center;
+        }
+        .wrapper .sidebar ul a:hover,
+        .wrapper .sidebar ul a.active{
+            color: #ffffff;
+
+            background:rgb(172, 128, 255);
+            border-right: 2px solid rgb(29, 0, 55);
+        }
+
+        .wrapper .sidebar ul a:hover:before,
+        .wrapper .sidebar ul a.active:before{
+            display: block;
+        }
+    </style>
+</header>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename= '/images/Mixxerlogo.png')}}">
+                </div>
+                <ul>
+                    {% if session["user"] is defined %}
+                            <div class ="profile">
+                                <img src="{{ url_for('static', filename= '/images/NIKIprofile.webp')}}">
+                            </div>
+                                <a href='/profile'>
+                                    <span class="item">Profile</span>
+                                </a>
+                                <a href='/feed'>
+                                    <span class="item">Feed</span>
+                                </a>
+                                <a href='/discover'>
+                                    <span class="item">Discover</span>
+                                </a>
+                                <a href='/chats'>
+                                    <span class="item">Chats</span>
+                                </a>
+                                <a href="/logout">
+                                    <span class="item">Logout</span>
+                                </a>
+                    {% else %}
+                            <a href='/'>
+                                <span class="item">Home</span>
+                            </a>
+                            <a href="/aboutus">
+                                <span class="item">About us</span>
+                            </a>
+                    
+                            <a href="/login">
+                                <span class="item">Log in</span>
+                            </a>
+                    
+                    {% endif %}
+                        
+                </ul>
+                <div>&nbsp;&nbsp;</div>
+                <div>&nbsp;&nbsp;</div>
+                <div>&nbsp;&nbsp;</div>
+                <div class="footer">
+                    Copyright (c) 2023 Mixxer Inc. All rights reserved. <p/>
+                    View our privacy policy <a href="privacy.html">here</a>.
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
